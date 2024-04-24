@@ -16,7 +16,7 @@ timezone: America/New_York
 
 title: Cole Wentzel # the main title
 
-tagline: Hi! I'm Cole and this is where I post about whatever I'm up to. It could be projects, art, or epiphanies about life. # it will display as the sub-title
+tagline: Hi! This is where I post about whatever I'm up to. It could be projects, art, or epiphanies about life. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   This is the place I post about whatever I'm up to. It could be projects, art, or epiphanies about life.
@@ -38,10 +38,7 @@ social:
   email: contact@colewentzel.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    # https://twitter.com/username # change to your twitter homepage
-    - https://github.com/colewentzel # change to your github homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
+    - https://github.com/colewentzel
     - https://www.linkedin.com/in/colewentzel
 
 google_site_verification: # fill in to your verification string

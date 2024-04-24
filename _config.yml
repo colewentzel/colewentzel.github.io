@@ -19,7 +19,7 @@ title: Cole Wentzel # the main title
 tagline: Hi! I'm Cole and this is where I post about whatever I'm up to. It could be projects, art, or epiphanies about life. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  I’m Cole Wentzel and I'm a senior Computer Engineering student at Boston University with a strong foundation in hardware and low-level software. Hands-on experience is the way that I learn most effectively, and I love seeing my ideas come to fruition and learning new ways to approach problems. My experience working with children has helped me develop the skill to communicate complex ideas to a wide audience. I’m currently looking for opportunities that will allow me to grow my knowledge base in computer engineering while also contributing to a project or team. This is the placve where I write about programming, software engineeringm,
+  This is the place I post about whatever I'm up to. It could be projects, art, or epiphanies about life.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -73,7 +73,7 @@ theme_mode: dark # [light | dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn:
+img_cdn: 
 
 # the avatar on sidebar, support local or CORS resources
 avatar: /assets/sidebar_img.jpg
@@ -126,7 +126,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: ""
+baseurl: "colewentzel.com"
 
 # ------------ The following options are not recommended to be modified ------------------
 

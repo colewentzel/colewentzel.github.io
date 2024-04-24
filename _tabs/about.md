@@ -3,7 +3,7 @@ icon: fas fa-info-circle
 order: 1
 ---
 
-<img src="/assets/img/public/me_circle.png" data-src="/assets/img/public/mockup.png" style="margin-left: auto; margin-right:auto; size:50%">
+<img src="/assets/img/public/me_circle.png" data-src="/assets/img/public/mockup.png" class="img" style="width: 50%; margin-left: auto; margin-right: auto;">
 
 # Hi, I'm Cole.
 I'm a computer engineering student at Boston University. I really enjoy working with hardware and low-level code.

@@ -54,9 +54,9 @@ So we begin: the [GitHub Pages documentation](https://pages.github.com/)! Seems 
 Unfortunately this was the easy part. I don't want to be `http://colewenzel.github.io/`. I've gotta set up my custom domain, the <span style="color:#d97471">much more beautiful</span> `http://colewentzel.com`.
 
 ## Bespoke Domain
-So for some background, browsers actually don't directly access any URL. When someone types a URL into the address bar, the browser sends a request to that domain’s nameservers and asks for the IP address where that website's content is located. That IP is returned as a DNS record called an `A record`.
+So for some background, browsers actually don't directly access any URL. When someone types a URL into the address bar, the browser sends a request to that domain’s nameservers and asks for the IP address where that website's content is located. That IP is returned as a DNS record called an `A` record.
 
-So I need setup `A records` that point `colewentzel.com` to the IP addresses for GitHub Pages. I navigate to my new domain registrar, Squarespace and set up the DNS records. And...
+So I need setup `A` records that point `colewentzel.com` to the IP addresses for GitHub Pages. I navigate to my new domain registrar, Squarespace and set up the DNS records. And...
 
 <div style="text-align:center; margin-bottom: 1rem">
 <img src="/assets/img/public/post1/nameserver_error.png" data-src="/assets/img/public/post1/nameserver_error.png" alt="nameserver_error.png" class="img" style="width: 80%; margin-left: auto; margin-right: auto; margin-bottom: 0;">
@@ -72,7 +72,7 @@ It turns out I forgot that past me actually switched my domain off the default n
 
 Now we are 100% going to GitHub but my site is not here. <span style="color:#d97471">Why.</span>
 
-...So I got excited and missed a very important step: setting up the `CNAME record` for my domain. A `CNAME record` points one URL to another URL. Say...
+...So I got excited and missed a very important step: setting up the `CNAME` record for my domain. A `CNAME` record points one URL to another URL. Say...
 
 ```mermaid
 flowchart LR
@@ -133,7 +133,7 @@ Tragic and frustrating!! I was building on each version of the theme at least tw
 <p style="margin-top: 0;"><i>Frantic cries for help. And despair.</i></p>
 </div>
 
- Now I had to get back to investigating. In the docs, I'm told to run `tools/init`. This is a a bash script, so I can't run the build file provided in `\tools` in Powershell. I switched to Windows Subsystem for Linux (WSL) to run it, and I still got an error `-bash: '\r': command not found`.
+ Now I had to get back to investigating. In the docs, I'm told to run `tools/init`. This is a bash script, so I can't run the build file provided in `\tools` in Powershell. I switched to Windows Subsystem for Linux (WSL) to run it, and I still got an error `-bash: '\r': command not found`.
 
 Not great. Terrible in fact. Luckily, Google comes to the rescue again. I saw that Windows style newline characters can cause issues and using `dos2unix` can make these scripts Unix compatible.
 

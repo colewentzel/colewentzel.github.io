@@ -2,7 +2,7 @@
 title: So... You Want to Make a Website
 date: 2024-04-25 15:35:00 +/-0000
 categories: [Projects, Web]
-tags: [learning log, projects, web, wip]
+tags: [learning log, projects, web]
 mermaid: true
 pin: false
 ---
@@ -67,7 +67,7 @@ It turns out I forgot that past me actually switched my domain off the default n
 
 <div style="text-align:center; margin-bottom: 1rem">
 <img src="/assets/img/public/post1/404.png" data-src="/assets/img/public/post1/404.png" alt="404.png" class="img" style="width: 70%; margin-left: auto; margin-right: auto; margin-bottom: 0;">
-<p style="margin-top: 0;"><i>Well... that's a better not right.</i></p>
+<p style="margin-top: 0;"><i>Well... that's a <b>better</b> not right.</i></p>
 </div>
 
 Now we are 100% going to GitHub but my site is not here. <span style="color:#d97471">Why.</span>
@@ -133,7 +133,7 @@ Tragic and frustrating!! I was building on each version of the theme at least tw
 <p style="margin-top: 0;"><i>Frantic cries for help. And despair.</i></p>
 </div>
 
- Now I had to get back to investigating. In the docs, I'm told to run `bash tools/init`. I obviously can't run the build file provided in `\tools` on Powershell, because it's a bash script. So, I switched to Windows Subsystem for Linux (WSL) to run it, and I still got an error `-bash: '\r': command not found`.
+ Now I had to get back to investigating. In the docs, I'm told to run `tools/init`. This is a a bash script, so I can't run the build file provided in `\tools` in Powershell. I switched to Windows Subsystem for Linux (WSL) to run it, and I still got an error `-bash: '\r': command not found`.
 
 Not great. Terrible in fact. Luckily, Google comes to the rescue again. I saw that Windows style newline characters can cause issues and using `dos2unix` can make these scripts Unix compatible.
 
@@ -165,7 +165,7 @@ And after pushing this change... the website finally deployed. I checked it on E
 ## Conclusion
 So for all my efforts, I now have an empty site. But it *works.* And it should be easy to maintain and add to from now on. Hopefully when you read this, it's less empty.
 
-I wish that this wasn't such an ordeal, but I'm glad that I for it working and I'm proud of myself for getting through it. Plus, now I can help some of my friends who are using website-builders migrate if they want to, or at least set up custom domains.
+I wish that this wasn't such an ordeal, but I'm glad that I got it working and I'm proud of myself for getting through it. Plus, now I can help some of my friends who are using website-builders migrate if they want to, or at least set up custom domains.
 
 And for anyone who wants an encore:
 

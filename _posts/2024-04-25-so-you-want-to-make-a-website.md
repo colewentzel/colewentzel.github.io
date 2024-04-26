@@ -1,6 +1,6 @@
 ---
 title: So... You Want to Make a Website
-date: 2024-04-24 12:35:00 +/-0000
+date: 2024-04-25 15:35:00 +/-0000
 categories: [Projects, Web]
 tags: [learning log, projects, web, wip]
 mermaid: true
@@ -126,7 +126,7 @@ clone2[clone the full theme repo] --> edit2[set up full theme locally]
 end
 ```
 
-Tragic and frustrating!! A huge issue I was having that I didn't realize at the time was that <span style="color:#d97471">Firefox was caching my website</span>, so even though I saw a perfectly working page after updating, my JavaScript was **<span style="color:#d97471">broken</span>**. I pushed my page to `main` and deployed it using `deploy from branch: main`. It looked good to me. I started sharing it with my friends, because I was very proud of myself. I will let this image of the aftermath speak for me:
+Tragic and frustrating!! I was building on each version of the theme at least twice. A huge issue I was having that I didn't realize at the time was that <span style="color:#d97471">Firefox was caching my website</span>, so even though I saw a perfectly working page after updating, my JavaScript was **<span style="color:#d97471">broken</span>**. I pushed my page to `main` and deployed it using `deploy from branch: main`. It looked good to me. I started sharing it with my friends, because I was very proud of myself. I will let this image of the aftermath speak for me:
 
 <div style="text-align:center; margin-bottom: 1rem">
 <img src="/assets/img/public/post1/despair.png" data-src="/assets/img/public/post1/despair.png" alt="despair.png" class="img" style="width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 0;">
@@ -150,8 +150,30 @@ And now it runs, but I get an error. We are failing forward! This time I'm missi
 
 So I did these things. Additionally, I saw that I should set the repo to use Github Actions to build instead of building from a branch. So I set it up, pushed the changes and... nothing. My GitHub actions workflows weren't starting. But any update to the default branch should trigger the workflows.
 
+I took a look at the workflows and realized they were set to trigger on a push to `master` but my default branch was called `main`. GitHub renamed its default branch from master branch to main in 2020, so I needed to update the workflows to accommodate this change (though I also could have renamed the branch).
+
+```yml
+on:
+  push:
+    branches: ["master"]
+
+...
+```
+
+And after pushing this change... the website finally deployed. I checked it on Edge, Chrome, and Safari now that I knew Firefox was showing me a cached version and I confirmed that it had indeed deployed correctly.
+
 ## Conclusion
-So for all my efforts, I now have an empty site. But it *works.* And it should be easy to maintain and add to from now on. I wish that this wasn't such an ordeal, but we
+So for all my efforts, I now have an empty site. But it *works.* And it should be easy to maintain and add to from now on. Hopefully when you read this, it's less empty.
+
+I wish that this wasn't such an ordeal, but I'm glad that I for it working and I'm proud of myself for getting through it. Plus, now I can help some of my friends who are using website-builders migrate if they want to, or at least set up custom domains.
+
+And for anyone who wants an encore:
 
 ## Bonus Sidequest: Setting up Email
 Something cool about having your own domain name is being able to set up a cool custom email address so people can reach you at something like `me@yourname.com` instead of something *<span style="color:#d97471">boring</span>* like `yourname@gmail.com`. I obviously wanted to achieve this ultimate bragging right.
+
+And this was actually one of the easier things to set up and I have it working at no cost to me. Cloudflare offers [free email routing](https://www.cloudflare.com/developer-platform/email-routing/) and it's set up through `MX` type DNS records. An `MX` record directs email to a mail server, so I set up records that direct any mail coming in to `colewentzel.com` to Cloudflare's mail servers. Then through my Cloudflare dashboard, I setup an email address and a forwarding address. So now I can receive emails at my address but Cloudflare doesn't let a user *send* any emails.
+
+To send emails, I'm borrowing Google's SMTP servers. The process to do this is detailed under Option 2 on [Google's support website](https://support.google.com/a/answer/176600?hl=en), but the gist of it is there is an option in gmail to `send mail as` using an alternative address. You set the SMTP server as `smtp.gmail.com` and use your Google credentials as the username and password.
+
+And while this is what I was most afraid of originally, it posed me no troubles. Cloudflare even shows me the status of emails received at `colewentzel.com`. So I guess I can say I accomplished my original goal and more.

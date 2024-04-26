@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Cole Wentzel</title>
   <subtitle>This is the place I post about whatever I'm up to. It could be projects, art, or epiphanies about life.</subtitle>
-  <updated>2024-04-25T13:44:51-04:00</updated>
+  <updated>2024-04-26T02:33:31-04:00</updated>
   <author>
     <name>Cole Wentzel</name>
     <uri>http://localhost:4000/</uri>
@@ -20,14 +20,14 @@
 
   
   <entry>
-    <title>This Website</title>
-    <link href="http://localhost:4000/posts/This-Website/" rel="alternate" type="text/html" title="This Website" />
-    <published>2024-04-24T12:35:00-04:00</published>
+    <title>So... You Want to Make a Website</title>
+    <link href="http://localhost:4000/posts/so-you-want-to-make-a-website/" rel="alternate" type="text/html" title="So... You Want to Make a Website" />
+    <published>2024-04-25T15:35:00-04:00</published>
   
-    <updated>2024-04-24T12:35:00-04:00</updated>
+    <updated>2024-04-25T15:35:00-04:00</updated>
   
-    <id>http://localhost:4000/posts/This-Website/</id>
-    <content src="http://localhost:4000/posts/This-Website/" />
+    <id>http://localhost:4000/posts/so-you-want-to-make-a-website/</id>
+    <content src="http://localhost:4000/posts/so-you-want-to-make-a-website/" />
     <author>
       <name>Cole Wentzel</name>
     </author>
@@ -36,11 +36,13 @@
     
     <category term="Projects" />
     
-    <category term="Website" />
+    <category term="Web" />
     
   
 
-  <summary></summary>
+  <summary>In the pursuit of better organizing my thoughts, I decided to carve out my own corner of the internet with this very website!
+
+I wanted to have a place where I could write fun documentation with a smidge of humor, while also cataloging the steps I’m taking while I figure out each project. Plus, I can use my silly documentation to write actually good documentation later, so this is a double win....</summary>
 
   </entry>
 

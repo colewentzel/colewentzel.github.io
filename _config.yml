@@ -44,7 +44,7 @@ google_site_verification: # fill in to your verification string
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
-  id: G-R7PX9NC2PD 
+  id: G-R7PX9NC2PD
 
 # Prefer color scheme setting.
 #
@@ -137,7 +137,7 @@ collections:
   tabs:
     output: true
     sort_by: order
-
+    
 defaults:
   - scope:
       path: "" # An empty string here means all files in the project

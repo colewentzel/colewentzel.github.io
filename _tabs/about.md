@@ -4,7 +4,7 @@ order: 1
 ---
  
 # Hi, I'm Cole.
-I'm an electrical engineering grad student at Tufts University (and Boston University computer engineering alumni). I really enjoy working with hardware and low-level code.
+I'm an electrical engineering grad student at Tufts University (and a Boston University computer engineering alumni). I really enjoy working with hardware and low-level code.
 
 I wanted to make this site to document my own thought process as I learn new things and undertake projects. Hopefully I'll give myself a laugh and a way to reflect as I work through new challenges.
 

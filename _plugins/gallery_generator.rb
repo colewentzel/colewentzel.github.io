@@ -35,6 +35,8 @@ module Jekyll
 
 			@album_source = File.join(site.config['album_dir'] || 'albums', @dir)
 			@album_metadata = get_album_metadata
+			@cover_image = @album_metadata['cover'] if @album_metadata['cover']
+			puts "Album: #{@dir} Cover: #{@cover_image}"
 
 			self.process(@name)
 			self.read_yaml(File.join(@base, '_layouts'), 'album_index.html')
@@ -44,6 +46,8 @@ module Jekyll
 			self.data['albums'] = []
 			self.data['description'] = @album_metadata['description']
 			self.data['hidden'] = true if @album_metadata['hidden']
+			self.data['cover'] = @cover_image
+
 
 			files, directories = list_album_contents
 
@@ -57,14 +61,19 @@ module Jekyll
 			end
 
 			if page == 0
-				directories.each do |subalbum|
-					albumpage = AlbumPage.new(site, site.source, File.join(@dir, subalbum))
-					if !albumpage.data['hidden']
-						self.data['albums'] << { 'name' => subalbum, 'url' => albumpage.url }
-					end
-					site.pages << albumpage #FIXME: sub albums are getting included in my gallery index
+			directories.each do |subalbum|
+				albumpage = AlbumPage.new(site, site.source, File.join(@dir, subalbum))
+				if !albumpage.data['hidden']
+				self.data['albums'] << {
+					'name' => subalbum,
+					'url' => albumpage.url,
+					'cover' => albumpage.data['cover'] || nil
+				}
 				end
+				site.pages << albumpage
 			end
+			end
+
 
 			files.each_with_index do |filename, idx|
 				if num_images
@@ -125,7 +134,7 @@ module Jekyll
 			# Get info for the album page and make the image's page.
 
 			rel_link = image_page_url(filename)
-			img_source = File.join('assets', 'gallery', @dir, filename)
+			img_source = File.join('assets', 'gallery', 'albums' , @dir, filename)
 
 
 			image_data = {

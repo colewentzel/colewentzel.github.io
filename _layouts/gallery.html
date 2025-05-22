@@ -1,0 +1,27 @@
+---
+layout: page
+title: albums
+---
+<h2>Art by Me</h2>
+
+<ul>
+  {% for album in page.albums %}
+    {% assign album_path = album.name | uri_escape %}
+    <pre>{{ album | inspect }}</pre>
+    <li>
+      <a href="{{ album.url }}">
+        {% if album.cover %}
+          <img
+            src="/assets/gallery/albums/{{ album_path }}/{{ album.cover }}"
+            data-src="/assets/gallery/albums/{{ album_path }}/{{ album.cover }}"
+            alt="{{ album.name }} cover"
+            class="img"
+            style="width: 200px; border-radius: 5%;"
+          >
+        {% endif %}
+        <br>
+        {{ album.name }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

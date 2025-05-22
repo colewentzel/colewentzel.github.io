@@ -199,12 +199,12 @@ image:
   output: generated
   presets:
     album_thumb:
-      width: 200
+      width: 400
       attr:
         class: album-image
     medium:
-      width: 1200
+      width: 1000
       attr:
         class: image
 
-album_dir: assets/gallery
+album_dir: assets/gallery/albums
